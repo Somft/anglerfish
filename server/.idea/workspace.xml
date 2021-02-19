@@ -12,22 +12,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71e1a493-7c5a-4800-b6d1-248f8bfaad4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../web/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/components/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="71e1a493-7c5a-4800-b6d1-248f8bfaad4d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,16 +45,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Embedded/Robot" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="org.rust.disableDetachedFileInspectionC:/Dev/Projekty/Anglerfish/src/configuration.rs" value="true" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package anglerfish --bin anglerfish" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -98,7 +78,9 @@
       <option name="presentableId" value="Default" />
       <updated>1610469993796</updated>
       <workItem from="1610469995485" duration="7512000" />
-      <workItem from="1610484326968" duration="17510000" />
+      <workItem from="1610484326968" duration="18113000" />
+      <workItem from="1610738046789" duration="24000" />
+      <workItem from="1611956820524" duration="1315000" />
     </task>
     <servers />
   </component>

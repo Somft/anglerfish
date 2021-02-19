@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Col, Row, Tabs } from 'antd';
+import { Graph } from '../../ui/Graph';
 
 type Props = {
 
@@ -13,11 +14,8 @@ type Channel = {
 function ChannelSettings(props: {channel: Channel}) {
     return (
         <Card bordered={false}>
-        <Row>
-            <Col md={6}>
             Hello world {props.channel.name}
-            </Col>
-        </Row>  
+            <Graph />
         </Card>
     );
 }
@@ -33,7 +31,7 @@ export function LigthSettingsComponent(props: Props) {
     ];
     
     return  (
-      <Tabs defaultActiveKey="0" tabPosition={"left"} style={{ height: 220 }}>
+      <Tabs defaultActiveKey="0" tabPosition={"left"}>
         {channels.map((channel, i) => (
             <Tabs.TabPane tab={channel.name} key={`${i}`}>
             <ChannelSettings channel={channel} />

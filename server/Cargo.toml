@@ -13,3 +13,7 @@ actix-files = "0.5.0"
 serde = { version = "1.0.101", features = ["derive"] }
 actix-web-actors = "3"
 uuid = { version = "0.8", features = ["v4", "serde"] }
+
+#![cfg(target_os = "linux")]
+
+#![cfg(target_os = "windows")]
