@@ -1,9 +1,9 @@
-function relativeMouseCoords(event: MouseEvent){
+function relativeMouseCoords(event: MouseEvent, canv?: HTMLCanvasElement){
     var totalOffsetX = 0;
     var totalOffsetY = 0;
     var canvasX = 0;
     var canvasY = 0;
-    var currentElement = event.target as HTMLElement;
+    var currentElement = canv ?? event.target as HTMLElement;
 
     do{
         totalOffsetX += currentElement.offsetLeft - currentElement.scrollLeft;

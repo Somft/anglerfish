@@ -1,11 +1,9 @@
 import React from 'react';
-import "antd/dist/antd.css";
-import {LigthSettingsComponent} from './views/light-settings/LightSettingsComponent';
+import 'antd/dist/antd.css';
+import LightSettingsContainer from './views/light-settings/LightSettingsContainer';
 
-export class App extends React.Component {
-    render() {
-        return (
-            <LigthSettingsComponent />
-        );
-    }
+export function App() {
+    return (
+        <LightSettingsContainer />
+    );
 }

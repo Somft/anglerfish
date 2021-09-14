@@ -1,3 +1,4 @@
+use serde::Deserialize;
 use actix_web::get;
 use actix_web::web;
 use actix_web::Error;
@@ -8,12 +9,20 @@ use actix::{Actor, ActorContext, Running};
 use actix::StreamHandler;
 use std::time::Instant;
 use uuid::Uuid;
+use crate::AppState;
 
 type WsContext = <ControlWebsocket as Actor>::Context;
+
+#[derive(Deserialize)]
+struct ChannelRequest {
+    channel_id: Uuid,
+    values: Vec<f32>,
+}
 
 struct ControlWebsocket {
     id: Uuid,
     hb: Instant,
+    state: web::Data<AppState>
 }
 
 impl Actor for ControlWebsocket {
@@ -45,19 +54,20 @@ impl StreamHandler<Result<ws::Message, ws::ProtocolError>> for ControlWebsocket 
 }
 
 impl ControlWebsocket {
-    fn new() -> Self {
+    fn new(state: web::Data<AppState>) -> Self {
         Self {
             hb: Instant::now(),
             id: Uuid::new_v4(),
+            state,
         }
     }
 
-    fn handle_start(&mut self, ctx: &mut WsContext) {
-        println!("Websocket ({0}) connected.", self.id);
+    fn handle_start(&mut self, _ctx: &mut WsContext) {
+        // println!("Websocket ({0}) connected.", self.id);
     }
 
-    fn handle_stop(&mut self, ctx: &mut WsContext) {
-        println!("Websocket ({0}) disconnected.", self.id);
+    fn handle_stop(&mut self, _ctx: &mut WsContext) {
+        // println!("Websocket ({0}) disconnected.", self.id);
     }
 
     fn handle_pong(&mut self) {
@@ -70,13 +80,20 @@ impl ControlWebsocket {
     }
 
     fn handle_text(&mut self, text: String) {
-        println!("Received message: {0}", text);
+        let mut channels = self.state.channels.lock().unwrap();
+        let message: ChannelRequest = serde_json::from_str(&text).unwrap();
+        for i in 0..channels.len() {
+            if channels[i].id == message.channel_id {
+                channels[i].values = message.values.clone();
+            }
+        }
     }
 }
 
 
-#[get("/v1/api/ws/info")]
-pub async fn get(r: HttpRequest, stream: web::Payload) -> Result<HttpResponse, Error> {
-    let res = ws::start(ControlWebsocket::new(), &r, stream);
+#[get("/v1/api/ws/control")]
+pub async fn get(r: HttpRequest, stream: web::Payload, state: web::Data<AppState>) -> Result<HttpResponse, Error> {
+    let res = ws::start(ControlWebsocket::new(state), &r, stream);
     res
 }
+
