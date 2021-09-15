@@ -16,8 +16,6 @@ type ChannelSettingsProps = {
 function ChannelSettings(props: ChannelSettingsProps) {
     return (
         <Card bordered={false}>
-            Hello world
-            {' '}
             {props.channel.name}
             <Graph
                 channel={props.channel}

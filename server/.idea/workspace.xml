@@ -5,7 +5,7 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="CargoProjects">
@@ -13,31 +13,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71e1a493-7c5a-4800-b6d1-248f8bfaad4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/lighting_service.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/.idea/web.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/utils/CancellationToken.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/utils/apiRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/utils/delay.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/utils/getMessageFromException.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/utils/useApiRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.cargo/config.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/control_service.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/control_service.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/info_service.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/info_service.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/../web/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/ui/Graph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/ui/Graph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/views/light-settings/LightSettingsComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/views/light-settings/LightSettingsComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/views/light-settings/LightSettingsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/views/light-settings/LightSettingsContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/utils/relativeClick.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/utils/relativeClick.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../web/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +38,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/api/control_service.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/pwm-pca9685-0.3.1/src/types.rs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Cargo.lock" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.cargo/config.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/pwm-pca9685-0.3.1/src/channels.rs" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="8lee3bbp" />
   </component>
@@ -73,7 +63,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Embedded/Robot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="org.rust.disableDetachedFileInspectionC:/Dev/Projekty/Anglerfish/src/configuration.rs" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -83,8 +74,10 @@
       <option name="command" value="run --package anglerfish --bin anglerfish" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
       <option name="backtrace" value="SHORT" />
       <envs />
       <option name="isRedirectInput" value="false" />
@@ -93,7 +86,7 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -119,6 +112,8 @@
       <workItem from="1620492787223" duration="145000" />
       <workItem from="1620492975518" duration="2483000" />
       <workItem from="1631631929436" duration="7037000" />
+      <workItem from="1631643716826" duration="2714000" />
+      <workItem from="1631655516059" duration="8930000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,5 @@
 import {
-    Col, Row, Checkbox, InputNumber,
+    Col, Row, Checkbox, InputNumber, Button,
 } from 'antd';
 import React, { useEffect, useRef } from 'react';
 import { setupCanvasDpi } from '../../utils/canvas';
@@ -158,6 +158,44 @@ function useGraph(channel: ChannelResponse, initialValues: number[], webSocket: 
         height: 0,
     });
 
+    const addPoint = () => {
+        const canvasEl = canvas.current!;
+        const state = stateRef.current;
+        const drawingContext = canvasEl.getContext('2d')!;
+        const render = () => drawGraph(drawingContext, state);
+
+        if (state.values.length < 100) {
+            state.values.push(0);
+        }
+
+        const message = JSON.stringify({
+            channel_id: channel.id,
+            values: state.values,
+        });
+        webSocket.send(message);
+
+        render();
+    }
+
+    const removePoint = () => {
+        const canvasEl = canvas.current!;
+        const state = stateRef.current;
+        const drawingContext = canvasEl.getContext('2d')!;
+        const render = () => drawGraph(drawingContext, state);
+
+        if (state.values.length >= 3) {
+            state.values.pop();
+        }
+
+        const message = JSON.stringify({
+            channel_id: channel.id,
+            values: state.values,
+        });
+        webSocket.send(message);
+
+        render();
+    }
+
     useEffect(() => {
         const canvasEl = canvas.current!;
         const state = stateRef.current;
@@ -243,6 +281,8 @@ function useGraph(channel: ChannelResponse, initialValues: number[], webSocket: 
     return {
         canvas,
         container,
+        addPoint,
+        removePoint,
     };
 }
 
@@ -256,18 +296,19 @@ function Graph(props: Props) {
                     <canvas ref={graph.canvas} />
                 </div>
             </Col>
-            <Col span={6}>
-                <Checkbox>
-                    Snap to grid
-                </Checkbox>
-                <InputNumber
-                    defaultValue={10}
-                    min={0}
-                    max={100}
-                    formatter={value => (value === '' ? '' : `${value}%`)}
-                    parser={value => value?.replace('%', '') ?? 0}
-                />
+            <Col span={1}>
+
             </Col>
+            <Col span={5}>
+
+            </Col>
+            <br/>
+            <Button onClick={graph.removePoint}>
+                -
+            </Button>
+            <Button onClick={graph.addPoint}>
+                +
+            </Button>
         </Row>
     );
 }
